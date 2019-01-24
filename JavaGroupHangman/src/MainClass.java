@@ -34,8 +34,8 @@ public class MainClass {
 					
 			//prints game over info and restart or ends game if ends game gameRestart = false
 			boolean winOrLoose = SK.ScoreManagement.didPlayerWin();
-			gameRestart = UI.GameOverManagement.printGameOverInfo(winOrLoose);//UX
-			
+			UI.GameOverManagement.printGameOverInfo(winOrLoose);//UX
+			UI.GameOverManagement.playAgain();//UX
 		}//end of gameRestart loop
 		System.exit(0);
 	}
