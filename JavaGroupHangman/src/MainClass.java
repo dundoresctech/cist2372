@@ -31,8 +31,7 @@ public class MainClass {
 					UI.DrawHangman.drawCurrentHangman(howManyWrongGuesses);//UX
 					
 				}//end of isGameRunning loop
-					
-			//prints game over info and restart or ends game if ends game gameRestart = false
+			
 			boolean winOrLoose = SK.ScoreManagement.didPlayerWin();
 			UI.GameOverManagement.printGameOverInfo(winOrLoose);//UX
 			UI.GameOverManagement.playAgain();//UX
