@@ -31,6 +31,7 @@ public class UserGuessManagement
 			}
 			else
 			{
+				letterEntered = letterEntered.toUpperCase();
 				guessedLetter = letterEntered.charAt(0);
 				keepLooping = false;
 				someScanner.close();
@@ -41,6 +42,7 @@ public class UserGuessManagement
 		upperCaseCurretWord = wordToGuess.toUpperCase();
 		currentWordArray = upperCaseCurretWord.toCharArray();
 		
+		
 		for(int x = 0; x < isArrayRight.length; x++)
 		{
 			if(isArrayRight[x] == true)
@@ -49,9 +51,7 @@ public class UserGuessManagement
 			}
 		}
 		
-		//newAstWord = astWordArr.toString();
 		newAstWord = new String(astWordArr);
-		
 		return newAstWord;
 	}
 
@@ -76,10 +76,10 @@ public class UserGuessManagement
  		return returnArray;
 	}
 	
-	public static void main(String[] args) 
-	
-	{
-		System.out.println(takeUserGuess("**sh", "fish"));
-	}
+//	public static void main(String[] args) 
+//	
+//	{
+//		System.out.println(takeUserGuess("**sh", "fish"));
+//	}
 	
 }
