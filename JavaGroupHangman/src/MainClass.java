@@ -36,7 +36,6 @@ public class MainClass {
 			UI.GameOverManagement.printGameOverInfo(winOrLoose);//UX
 			UI.GameOverManagement.playAgain();//UX
 		}//end of gameRestart loop
-		System.exit(0);
 	}
 }
 
