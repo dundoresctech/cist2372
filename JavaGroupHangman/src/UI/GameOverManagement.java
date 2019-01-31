@@ -1,7 +1,7 @@
 import java.util.Scanner;
 public class GameOverManagement 
 {
-	public static void printGameOverinfo(boolean WinOrLose) //base method to print the game over/ you won message then ask if the player wants to play again.
+	public static void printGameOverInfo(boolean WinOrLose) //base method to print the game over/ you won message then ask if the player wants to play again.
 	{
 		if(WinOrLose == true) //simply checks the WinOrLose variable and then changes the message based off the results true = win, false = lose.
 		{
@@ -17,7 +17,8 @@ public class GameOverManagement
 	{
 		Boolean isValid = false;//used by the while loop that checks the user input - Silas
 		while(!isValid) //while loop to handle exception handling - Silas
-		{					Scanner reader = new Scanner(System.in);//new scanner - Silas
+		{					
+			Scanner reader = new Scanner(System.in);//new scanner - Silas
 			System.out.println("Would you like to play again? Type Yes to play again, or No to close the Program");
 			String input = reader.next();//input
 				if (input.equalsIgnoreCase("Yes"))//sets the return variable for the method to true if the player types in yes - Silas
