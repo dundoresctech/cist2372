@@ -1,4 +1,4 @@
-
+import java.util.Scanner;
 public class GameOverManagement 
 {
 	public static void printGameOverinfo(boolean WinOrLose) //base method to print the game over/ you won message then ask if the player wants to play again.
