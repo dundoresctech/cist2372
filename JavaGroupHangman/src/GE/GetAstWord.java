@@ -3,7 +3,7 @@ package GE;
 public class GetAstWord 
 {
 
-	public static void getAstWord(String randWord) 
+	public static string getAstWord(String randWord) 
 	{
 		char[] astWord = new char[randWord.length()];
 		int i = 0;
