@@ -1,6 +1,6 @@
 package GE;
 
-public class GetAstWord
+public class GetAstWord 
 {
 	//Creates an asterisk character array from a random word entered into the function and returns it as a string value.
 	
