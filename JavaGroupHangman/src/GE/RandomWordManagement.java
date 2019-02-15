@@ -1,14 +1,18 @@
 package GE;
 
-public class RandomWordManagement {
 import java.util.Random;
 
-   public static void getRandomWord() 
+public class RandomWordManagement {
+
+
+   public static String getRandomWord() 
     {
 
-    String[] word = {"Artichoke", "Bearskin", "Cuttlefish", "Digital", "Earwax", "Fluter", "Goatsbeard", "Huckleberry", "Imposter", "Juniper", "Knobbly", "Lantern", "Mammoth", "Nightmare", "Origami", "Playwright", "Quartzrose", "Racoon", "Sorcerer", "Tablespoon", "Ultrasound", "Vessel", "Yesterday", "Zesty"};
-
+    String[] word = {"Earthquake", "Prisoner", "Communication", "Potato", "Computer Science", "Kamikaze", "Pistol", "Deoxyribonucleic Acid", "Armageddon", "Caricature", "Philosophy"};
     System.out.println( word[new Random().nextInt(word.length)]);
 
+    Random rand = new Random();
+    String randWord = new String(word[rand.nextInt(word.length)]);   
+    return randWord;
     }
 }
