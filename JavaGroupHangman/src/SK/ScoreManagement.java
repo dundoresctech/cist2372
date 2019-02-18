@@ -1,23 +1,32 @@
 package SK;
 
 public class ScoreManagement {
-{
-  if(winCount == notSame(array).length)
-  {
-    System.out.println("You have Won!");
-    System.out.println(astword + " is the correct word!");
-    best;
-  }
-  else if(hangMan(wrongCounter)){
-    break;
-  }
- }
+    private static int howManyWrongGuesses = 0;
+    public static int howManyWrongGuesses(String updatedAstWord, String astWord){
+        if(updatedAstWord == astWord) {
+            howManyWrongGuesses++;
+        }
+        return howManyWrongGuesses;
 
- System.out.println();
-}
+    }
+    public static boolean didPlayerWin(){
+        boolean winOrLoose = true;
+        //if they used all there guesses they lost
+        if (howManyWrongGuesses >= 6) {
+            winOrLoose = false;
+        }
+        return winOrLoose;
+    }
+    public static boolean isGameRunning(int howManyWrongGuesses)
+    {
 
-public static boolean hangMan(int wrongCounter)
-{
-
-}
+        if(howManyWrongGuesses != 6)
+        {
+              return false;
+        }
+        else
+        {
+            return true;
+        } 
+    }
 }
