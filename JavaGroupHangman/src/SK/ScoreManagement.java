@@ -20,7 +20,7 @@ public class ScoreManagement {
     public static boolean isGameRunning(int howManyWrongGuesses)
     {
 
-        if(howManyWrongGuesses != 6)
+        if(howManyWrongGuesses == 6)
         {
               return false;
         }
