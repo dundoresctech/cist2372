@@ -19,7 +19,7 @@ public class MainClass {
 			
 			UI.GameStartManagement.printGameStartInfo();//UX
 				
-				while (isGameRunning = SK.ScoreManagement.isGameRunning()){//isGameRunning value controlled by SK
+				while (isGameRunning == SK.ScoreManagement.isGameRunning()){//isGameRunning value controlled by SK
 				
 					astWord = GE.RandomWordManagement.getAstWord(wordToGuess);//GE
 					System.out.println(astWord);
