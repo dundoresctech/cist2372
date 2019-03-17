@@ -17,4 +17,16 @@ public class ScoreManagement {
         }
         return winOrLoose;
     }
+    public static boolean isGameRunning(int howManyWrongGuesses)
+    {
+
+        if(howManyWrongGuesses == 6)
+        {
+              return false;
+        }
+        else
+        {
+            return true;
+        } 
+    }
 }
