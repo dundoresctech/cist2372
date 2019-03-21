@@ -1,23 +1,101 @@
-package GE;
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javaapplication10;
 
-public class GetAstWord 
+import java.util.Scanner;
+import static javax.management.Query.GE;
+
+/**
+ *
+ * @author Gr01stu211
+ */
+public class JavaApplication10 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+    
+
+import java.util.Scanner;
+
+public class UserGuessManagement 
 {
-	//Creates an asterisk character array from a random word entered into the function and returns it as a string value.
-	
-	public static String getAstWord(String randWord) 
+	public static String takeUserGuess(String astWord, String wordToGuess)
 	{
-		char[] astWord = new char[randWord.length()];
-		int i = 0;
-		while(i < randWord.length())
+		boolean keepLooping = true;
+		boolean[] isArrayRight;
+		String letterEntered;
+		String newAstWord; 
+		String upperCaseCurretWord;
+		char guessedLetter = 0;
+		char[] astWordArr = astWord.toCharArray();
+		char[] currentWordArray;
+
+		System.out.println("Enter a letter to guess.");
+		Scanner someScanner = new Scanner(System.in);
+		
+		while(keepLooping == true)//loops until input is validated
 		{
-			astWord[i] = '*';
-			if(randWord.charAt(i) == ' ')
+			letterEntered = someScanner.nextLine();
+			if(letterEntered.length() != 1)
 			{
-				astWord[i] = ' ';
+				System.out.println("Enter just one letter.\n Try again.");
 			}
-			i++;
+			else if(!(letterEntered.matches("[a-zA-Z]")))
+			{
+				System.out.println("Only use the Alphabet!\n Try again.");
+			}
+			else
+			{
+				letterEntered = letterEntered.toUpperCase();
+				guessedLetter = letterEntered.charAt(0);
+				keepLooping = false;
+				someScanner.close();
+			}
 		}
-		String newAstWord = new String(astWord);
+		
+		isArrayRight = checkArrayForMatches(wordToGuess, guessedLetter);
+		upperCaseCurretWord = wordToGuess.toUpperCase();
+		currentWordArray = upperCaseCurretWord.toCharArray();
+		
+		
+		for(int x = 0; x < isArrayRight.length; x++)
+		{
+			if(isArrayRight[x] == true)
+			{
+				astWordArr[x] = currentWordArray[x];
+			}
+		}
+		
+		newAstWord = new String(astWordArr);
 		return newAstWord;
 	}
+
+	public static boolean[] checkArrayForMatches(String currentWord, char charToTest)//this generates a boolean array in response to the user's guess against the current word
+	{
+		String upperCaseCurretWord = currentWord.toUpperCase();
+		char[] currentWordArray = upperCaseCurretWord.toCharArray();
+		boolean[] returnArray = new boolean[currentWordArray.length];
+		
+		for(int x = 0; x < returnArray.length; x++)
+		{
+			char characterInArray = currentWordArray[x];
+			if(characterInArray == charToTest)
+			{
+				returnArray[x] = true;
+			}
+			else 
+			{
+				returnArray[x] = false;
+			}		
+		}
+ 		return returnArray;
+	}
+
+    }
+    
 }
